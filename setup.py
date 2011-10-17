@@ -6,7 +6,7 @@ setup(
     version='1.0',
     url='http://github.com/ametaireau/flask-rest/',
     license='BSD',
-    author="uAlexis Metaireau",
+    author=u"Alexis Métaireau",
     author_email="alexis@notmyidea.org",
     description="A simple REST toolkit for Flask",
     long_description=open('README.rst').read(),
