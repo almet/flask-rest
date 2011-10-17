@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup
 
 setup(
@@ -5,7 +6,7 @@ setup(
     version='1.0',
     url='http://github.com/ametaireau/flask-rest/',
     license='BSD',
-    author="Alexis Métaireau",
+    author="uAlexis Metaireau",
     author_email="alexis@notmyidea.org",
     description="A simple REST toolkit for Flask",
     long_description=open('README.rst').read(),
