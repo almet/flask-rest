@@ -24,7 +24,7 @@ register it with an url, and you're good.
 Here is a simple example on how to use it::
 
     from flask import Blueprint
-    from flask_rest import RestResource, need_auth
+    from flask_rest import RESTResource, need_auth
 
     # Subclass a RestResource and configure it
 
