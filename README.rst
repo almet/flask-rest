@@ -92,4 +92,4 @@ example::
                 setattr(self, name, value)
 
 If you want to have a look at a real use for this, please head to
-https://github.com/ametaireau/budget-manager/blob/master/budget/api.py
+https://github.com/spiral-project/ihatemoney/blob/master/budget/api.py
