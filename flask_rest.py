@@ -126,7 +126,7 @@ def serialize(func):
     """
     def wrapped(*args, **kwargs):
         # get the mimetype
-        mime = request.accept_mimetypes.best_match(SERIALIZERS.keys()) or "text/json"
+        mime = request.accept_mimetypes.best_match(SERIALIZERS.keys()) or "application/json"
         data = func(*args, **kwargs)
         serializer = SERIALIZERS[mime]
 
@@ -135,7 +135,7 @@ def serialize(func):
             status, data = data
 
         # serialize it
-        return werkzeug.Response(serializer.encode(data), 
+        return werkzeug.Response(serializer.encode(data),
                 status=status, mimetype=mime)
 
     return wrapped
@@ -155,4 +155,4 @@ class JSONEncoder(json.JSONEncoder):
         else:
             return json.JSONEncoder.default(self, o)
 
-SERIALIZERS = {"text/json": JSONEncoder()}
+SERIALIZERS = {"application/json": JSONEncoder(), "text/json": JSONEncoder()}
