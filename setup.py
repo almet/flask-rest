@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='Flask-REST',
-    version='1.2',
+    version='1.3',
     url='http://github.com/ametaireau/flask-rest/',
     license='BSD',
     author=u"Alexis Métaireau",
