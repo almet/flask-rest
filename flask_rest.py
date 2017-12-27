@@ -153,6 +153,15 @@ class JSONEncoder(json.JSONEncoder):
         elif hasattr(o, "isoformat"):
             return o.isoformat()
         else:
+            try:
+                from flask_babel import speaklater
+                if isinstance(o, speaklater.LazyString):
+                    try:
+                        return unicode(o)  # For python 2.
+                    except NameError:
+                        return str(o)  # For python 3.
+            except ImportError:
+                pass
             return json.JSONEncoder.default(self, o)
 
 SERIALIZERS = {"application/json": JSONEncoder(), "text/json": JSONEncoder()}
