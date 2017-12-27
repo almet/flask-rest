@@ -3,10 +3,10 @@ from setuptools import setup
 
 setup(
     name='Flask-REST',
-    version='1.3',
+    version='1.4.dev0',
     url='http://github.com/ametaireau/flask-rest/',
     license='BSD',
-    author=u"Alexis Métaireau",
+    author=u"Alexis MÃ©taireau",
     author_email="alexis@notmyidea.org",
     description="A simple REST toolkit for Flask",
     long_description=open('README.rst').read(),
